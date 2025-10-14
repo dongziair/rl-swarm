@@ -6,6 +6,7 @@ import requests
 from eth_account import Account
 from web3 import Web3
 
+
 ALCHEMY_URL = "https://gensyn-testnet.g.alchemy.com/public"
 
 MAINNET_CHAIN_ID = 685685
