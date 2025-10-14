@@ -21,6 +21,7 @@ class HivemindNode:
         default_factory=lambda: defaultdict(dict)
     )
 
+    
     # Reward outputs from the last training.
     rewards: Sequence[float | int] = field(default_factory=list)
 
