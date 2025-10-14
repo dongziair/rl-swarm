@@ -8,6 +8,7 @@ ROOT=$PWD
 # GenRL Swarm version to use
 GENRL_TAG="0.1.9"
 
+
 export IDENTITY_PATH
 export GENSYN_RESET_CONFIG
 export CONNECT_TO_TESTNET=true
