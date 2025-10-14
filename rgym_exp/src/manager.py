@@ -109,11 +109,11 @@ class SwarmGameManager(BaseGameManager, DefaultGameManagerMixin):
 
     def _get_my_rewards(self, signal_by_agent):
         if len(signal_by_agent) == 0:
-            return 0
+            return 1
         if self.peer_id in signal_by_agent:
             my_signal = signal_by_agent[self.peer_id]
         else:
-            my_signal = 0
+            my_signal = 1
         my_signal = (my_signal + 1) * (my_signal > 0) + my_signal * (my_signal <= 0)
         return my_signal
 
