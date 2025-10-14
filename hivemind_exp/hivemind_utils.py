@@ -5,6 +5,7 @@ from typing import Any, Callable, Sequence
 import torch
 
 
+
 @dataclass
 class HivemindNode:
     # Node metadata.
