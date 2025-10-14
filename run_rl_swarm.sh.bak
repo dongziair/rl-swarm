@@ -232,7 +232,7 @@ echo_green ">> Done!"
 
 
 echo -en $GREEN_TEXT
-yn=n
+read -p ">> Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N] " yn
 echo -en $RESET_TEXT
 yn=${yn:-N} # Default to "N" if the user presses Enter
 case $yn in
@@ -243,7 +243,7 @@ esac
 
 
 echo -en $GREEN_TEXT
-MODEL_NAME=Gensyn/Qwen2.5-0.5B-Instruct
+read -p ">> Enter the name of the model you want to use in huggingface repo/name format, or press [Enter] to use the default model. " MODEL_NAME
 echo -en $RESET_TEXT
 
 # Only export MODEL_NAME if user provided a non-empty value
@@ -255,7 +255,7 @@ else
 fi
 
 echo -en $GREEN_TEXT
-yn=n
+read -p ">> Would you like your model to participate in the AI Prediction Market? [Y/n] " yn
 if [ "$yn" = "n" ] || [ "$yn" = "N" ]; then
     PRG_GAME=false
     echo_green ">> Playing PRG game: false"
